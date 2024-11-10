@@ -1,6 +1,6 @@
 *{
     font-family: "Poppins", serif;
-  }
+}
   .property{
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@ section{
     width: 150px;
     font-size: 18px;
 }
-/* ----------------------- */
+/* ----------dare button------------- */
 .shadowd {
     position: absolute;
     top: 0;
@@ -96,7 +96,7 @@ section{
     transform: translateY(1px);
     transition: transform 34ms;
   }
-  /* ------------- */
+  /* ------button------- */
   .pushable {
   position: relative;
   background: transparent;
