@@ -88,7 +88,19 @@ const truthOrDare = {
         "Have you ever had a crush on a teacher?",
         "What’s the longest time you’ve gone without talking to your best friend?",
         "What’s the most embarrassing thing you’ve done in front of your parents?",
-        "What’s something you’ve done that you regret?"
+        "What’s something you’ve done that you regret?",
+        "What’s something you’ve never told anyone?",
+  "If you could switch lives with anyone for a day, who would it be and why?",
+  "What’s the most embarrassing thing you’ve ever done in public?",
+  "Have you ever broken someone’s heart? What happened?",
+  "What’s a secret talent that no one knows about?",
+  "If you could be famous for one thing, what would it be?",
+  "What’s the most awkward thing that’s ever happened to you on a date?",
+  "Have you ever lied to get out of a situation? What was the lie?",
+  "What’s the most trouble you’ve ever gotten into at school or work?",
+  "What’s a habit you’ve had for years that you can’t shake?",
+  "If you could ask anyone one question and get the truth, who would you ask and what would the question be?"
+
     ],
     dares: [
         "Dance with no music for 1 minute.",
@@ -159,8 +171,39 @@ const truthOrDare = {
         "Pretend you are an animal of the group’s choice for 1 minute.",
         "Eat a spicy food of the group’s choice.",
         "Do your best impression of a famous singer.",
-        "Pretend to be a statue for 2 minutes."
-    ]
+        "Pretend to be a statue for 2 minutes.",
+        "Do your best impression of a celebrity until someone guesses who it is.",
+  "Send a random emoji to the last person you texted.",
+  "Let someone write a word on your forehead with a marker.",
+  "Call a random contact and sing 'Happy Birthday' to them.",
+  "Do 20 push-ups in a row.",
+  "Dance with no music for 1 minute.",
+  "Try to lick your elbow.",
+  "Walk on your knees for the next 5 minutes.",
+  "Try to juggle 3 objects.",
+  "Do 10 jumping jacks and shout a random animal sound.",
+  "Talk in an accent (e.g., British, Australian) for the next 5 minutes.",
+  "Post a silly photo on your social media without any explanation.",
+  "Share the most embarrassing story from your childhood.",
+  "Let someone draw a mustache on your face with a washable marker.",
+  "Walk backwards for the next 3 minutes.",
+  "Try to touch your toes with your tongue.",
+  "Let the person to your left take a funny selfie of you.",
+  "Do your best impression of a robot.",
+  "Wear socks on your hands for the next 10 minutes.",
+  "Do a cartwheel.",
+  "Pretend to be a waiter/waitress and take an order from everyone in the room.",
+  "Sing the chorus of a song as loudly as possible.",
+  "Post a 'random thought' on your social media.",
+  "Try to whistle and hum at the same time.",
+  "Hold your breath for 15 seconds.",
+  "Pretend you’re a news anchor and give a report on a random topic.",
+  "Make a funny face and hold it for 1 minute.",
+  "Try to balance a spoon on your nose for 30 seconds.",
+  "Call a friend and tell them a funny joke.",
+  "Do your best dance move to a random song.",
+  "Act like an animal until someone guesses which one you are."
+]
 };
 
 const truthbtn = document.getElementById("truth")
@@ -170,15 +213,16 @@ const nextPlayer = document.getElementById("nextplayer")
 const player = document.getElementById("player")
 
 function funTruth(){
-    let index = Math.floor(Math.random()*100)
+    let index = Math.floor(Math.random()*truthOrDare.truths.length)
     content.textContent=truthOrDare.truths[index]
     content.style.color="#28a745"
-    console.log(index)
+    console.log(truthOrDare.truths.length)
 }
 function funDare(){
-    let index = Math.floor(Math.random()*100)
+    let index = Math.floor(Math.random()*truthOrDare.dares.length)
     content.textContent=truthOrDare.dares[index]
     content.style.color="#dc3545"
+    
 }
 function funNextPlayer(){
     player.textContent === "Player 1" ? (player.textContent="Player 2") : (player.textContent="Player 1")
